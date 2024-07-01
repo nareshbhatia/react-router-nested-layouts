@@ -6,27 +6,21 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import type { Movie } from '@/models';
-import { api } from '@/utils/api';
 import type { LoaderFunctionArgs } from 'react-router-dom';
 import { useLoaderData } from 'react-router-dom';
+
+const API_URL = import.meta.env.VITE_API_URL as string;
 
 interface Params {
   movieId: string;
 }
 
 export async function loader({ params }: LoaderFunctionArgs<Params>) {
-  const resMovie = await api.get<Movie>(`/movies/${params.movieId}`);
-  console.log(resMovie.data);
-  return resMovie.data;
+  return fetch(`${API_URL}/movies/${params.movieId}`);
 }
 
 export function MovieDetail() {
   const movie = useLoaderData() as Movie;
-
-  if (movie === undefined) {
-    return <div>Loading...</div>;
-  }
-
   const { name, releaseYear, ratingsSummary } = movie;
 
   return (

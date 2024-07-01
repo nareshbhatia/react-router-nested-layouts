@@ -2,7 +2,7 @@
 
 ![Screenshot](assets/screenshot.png)
 
-Live demo: https://nextjs-nested-layouts-ruby.vercel.app/
+Live demo: https://react-router-nested-layouts.vercel.app/
 
 This repository shows how to nest layouts using React Router.
 

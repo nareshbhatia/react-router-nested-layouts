@@ -12,7 +12,7 @@
     "graph": "turbo run build --graph",
     "lint": "run-s _lint _format",
     "preview": "vite preview",
-    "_format": "prettier --list-different '**/*.{js,jsx,ts,tsx,json,md}'",
+    "_format": "prettier --list-different '**/*.{css,js,jsx,ts,tsx,json,md}'",
     "_format:fix": "npm run _format -- --write",
     "_lint": "eslint '**/*.{js,jsx,ts,tsx}'",
     "_lint:fix": "npm run _lint -- --fix"

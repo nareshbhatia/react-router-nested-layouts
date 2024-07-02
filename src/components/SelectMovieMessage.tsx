@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle } from './ui/card';
 
 export function SelectMovieMessage() {
   return (
